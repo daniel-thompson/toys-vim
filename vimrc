@@ -120,6 +120,10 @@ map ,vb   :sp $HOME/.vim/bundle<CR>
 " use get_maintainer.pl to generate a Cc: list
 map ,gcc o<ESC>!!git cc<CR>
 
+" try to prep a patch series for release (based on contents of current
+" wiki page)
+map ,gr :!git release %<CR>
+
 " underscore based versions of vi's cw & dw
 map cu c/_<CR>
 map du d/_<CR>
