@@ -14,7 +14,6 @@ functional work.
 Quickstart
 ----------
 
-  git clone git@github.com:daniel-thompson/toys-vim.git ~/.vim
-  cd ~/.vim
-  git submodule init
-  git submodule update
+    git clone git@github.com:daniel-thompson/toys-vim.git ~/.vim
+    cd ~/.vim
+    git submodule update --init
