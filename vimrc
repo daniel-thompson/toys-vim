@@ -134,6 +134,11 @@ map cu c/_<CR>
 map du d/_<CR>
 
 "
+" Templates
+"
+map ,tr !!cat ~/Documents/Wiki/release_template.wiki<CR>
+
+"
 " IDE workalike features
 "
 
