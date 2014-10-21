@@ -119,9 +119,8 @@ nmap <F11> :TagbarToggle<CR>
 " repeat the last command on the next line (F12 is Again on Sun keyboards)
 map <F12> j.
 
-" edit the .vimrc file
-map ,vrc  :sp $HOME/.vimrc<CR>
-map ,vb   :sp $HOME/.vim/bundle<CR>
+" edit the .vim file
+map ,v  :sp $HOME/.vim<CR>
 
 " use get_maintainer.pl to generate a Cc: list
 map ,gcc o<ESC>!!git cc<CR>
