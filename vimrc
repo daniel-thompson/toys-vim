@@ -154,10 +154,10 @@ map <S-Tab> :<<CR>
 
 " Mash a button to fix the indentation or auto-complete (this will override the
 " above for C & C++ files)
-autocmd FileType c,c++ map <Tab> :pyf ~/.vim/bundle/clang-format/bin/clang-format.py<CR>
-autocmd FileType c,c++ map <S-Tab> :pyf ~/.vim/bundle/clang-format/bin/clang-format.py<CR>
-autocmd FileType c,c++ imap <S-Tab> <ESC>:pyf ~/.vim/bundle/clang-format/bin/clang-format.py<CR>i
-autocmd FileType c,c++ imap <C-Space> <C-X><C-U>
+autocmd FileType c,cpp map <Tab> :pyf ~/.vim/bundle/clang-format/bin/clang-format.py<CR>
+autocmd FileType c,cpp map <S-Tab> :pyf ~/.vim/bundle/clang-format/bin/clang-format.py<CR>
+autocmd FileType c,cpp imap <S-Tab> <ESC>:pyf ~/.vim/bundle/clang-format/bin/clang-format.py<CR>i
+autocmd FileType c,cpp imap <C-Space> <C-X><C-U>
 
 " comment/uncomment the current statement
 autocmd FileType c map //          ^i/* <ESC>/;<CR>a */<ESC>
