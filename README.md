@@ -17,3 +17,9 @@ Quickstart
     git clone git@github.com:daniel-thompson/toys-vim.git ~/.vim
     cd ~/.vim
     git submodule update --init
+
+Update to the latest version of all bundles
+-------------------------------------------
+
+    git submodule foreach git pull origin master
+    git commit -asm "bundle: Updated to the latest version of all bundles"
