@@ -30,6 +30,11 @@ if has("gui_running") && has("gui_gtk2")
   " Matches gnome-terminal with default theme (as of Fedora 22)
   set guifont=DejaVu\ Sans\ Mono\ 11
 
+  " Hide the menubar and toolbar (and provide a means to restore it)
+  set guioptions-=T
+  set guioptions-=m
+  amenu PopUp.Show/Hide\ Menubar :if &go=~#'m'<Bar>set go-=mT<Bar>else<Bar>set go+=mT<Bar>endif<CR>
+
   " Shortcuts to change fontsize
   nnoremap <C-Up> :silent! LargerFont<CR>
   nnoremap <C-Down> :silent! SmallerFont<CR>
