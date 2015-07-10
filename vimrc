@@ -130,6 +130,10 @@ map ,gcc o<ESC>!!git cc<CR>
 " wiki page)
 map ,gr :!git release %<CR>
 
+" Templates
+map ,tr !!cat /home/drt/Documents/Wiki/release_template.wiki<CR>
+map ,tt <ESC>1GO # <ESC>:let @"=expand("%:t:r")<CR>pkJ
+
 " underscore based versions of vi's cw & dw
 map cu c/_<CR>
 map du d/_<CR>
