@@ -26,8 +26,13 @@ Helptags
 " you find in vim-sensible).
 set autowrite
 set background=light
-if has("gui_running")
-  set guifont=Monospace\ 11
+if has("gui_running") && has("gui_gtk2")
+  " Matches gnome-terminal with default theme (as of Fedora 22)
+  set guifont=DejaVu\ Sans\ Mono\ 11
+
+  " Shortcuts to change fontsize
+  nnoremap <C-Up> :silent! LargerFont<CR>
+  nnoremap <C-Down> :silent! SmallerFont<CR>
 endif
 set mousemodel=popup
 set title
