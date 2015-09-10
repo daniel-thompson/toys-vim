@@ -121,6 +121,10 @@ nmap <F4> vapgq
 map <F5>   :cn<CR>
 map <S-F5>   :cp<CR>
 
+" Tab switching
+map <F6> :tabnext<CR>
+map <S-F6> :tabprev<CR>
+
 map <F8> :make<CR>
 
 " show tagbar
