@@ -187,9 +187,9 @@ autocmd FileType c map \\          bhh/ *[*][/]<CR>d/[/]<CR>x?[/][*]<CR>dw
 autocmd FileType html iabbrev </ </<C-X><C-O>
 autocmd FileType html imap <C-Space> <C-X><C-O>
 
-" Tab closure like Firefox
-map <C-W> :q<CR>
-map <C-S-W> :q!<CR>
+" Tab closure like Firefox (causes problems with split windows)
+"map <C-W> :q<CR>
+"map <C-S-W> :q!<CR>
 
 "
 " Project management
