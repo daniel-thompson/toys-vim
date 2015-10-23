@@ -48,14 +48,13 @@ set wildmode=longest,list,full
 set wildmenu
 
 " vimwiki setup
-" Places the wiki in ~/Documents, adopts markdown syntax and does sensible
-" line wrapping.
-" TODO: Eventually I expect to add 'ext': '.md' to the option list (to adopt
-"       sensible file extentions) but for now I'm just trialing markdown
-"       syntax.
+" Place the wiki in ~/Documents, adopt markdown syntax (and file extension)
+" and automatically wrap lines at a good margin for copying things into
+" e-mail.
 let g:vimwiki_list = [{'path':'~/Documents/Wiki',
 			\ 'path_html':'~/Documents/Wiki/html/',
-			\ 'syntax': 'markdown'}]
+			\ 'syntax': 'markdown',
+			\ 'ext': '.md'}]
 autocmd FileType vimwiki set tw=72
 autocmd FileType vimwiki set fo=cqt
 
