@@ -144,7 +144,7 @@ map ,gcc o<ESC>!!git cc<CR>
 map ,gr :!git release %<CR>
 
 " Templates
-map ,tr !!cat /home/drt/Documents/Wiki/release_template.wiki<CR>
+map ,tr !!cat /home/drt/Documents/Wiki/release_template.md<CR>
 map ,tt <ESC>1GO # <ESC>:let @"=expand("%:t:r")<CR>pkJ
 
 " underscore based versions of vi's cw & dw
@@ -155,7 +155,7 @@ map du d/_<CR>
 " Templates
 "
 map ,tm !!cat ~/Projects/toys/templates/module.c
-map ,tr !!cat ~/Documents/Wiki/release_template.wiki<CR>
+map ,tr !!cat ~/Documents/Wiki/release_template.md<CR>
 
 "
 " IDE workalike features
