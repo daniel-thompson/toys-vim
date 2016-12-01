@@ -26,7 +26,7 @@ Helptags
 " you find in vim-sensible).
 set autowrite
 set background=light
-if has("gui_running") && has("gui_gtk2")
+if has("gui_running") && (has("gui_gtk2") || has("gui_gtk3"))
   " Matches gnome-terminal with default theme (as of Fedora 22)
   set guifont=DejaVu\ Sans\ Mono\ 11
 
