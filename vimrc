@@ -116,13 +116,13 @@ map <S-F3> :%!xxd -c 12 -r<CR>
 " Reflow text in paragraph under cursor
 nmap <F4> vapgq
 
-" control keys for use on make files
-map <F5>   :cn<CR>
-map <S-F5>   :cp<CR>
-
 " Tab switching
 map <F6> :tabnext<CR>
 map <S-F6> :tabprev<CR>
+
+" control keys for use on make files
+map <F7>   :cn<CR>
+map <S-F7>   :cp<CR>
 
 map <F8> :make<CR>
 
@@ -185,6 +185,9 @@ autocmd FileType c map \\          bhh/ *[*][/]<CR>d/[/]<CR>x?[/][*]<CR>dw
 " HTML tag autoclose
 autocmd FileType html iabbrev </ </<C-X><C-O>
 autocmd FileType html imap <C-Space> <C-X><C-O>
+
+" Automatically update a vimwiki page (like todo.md)
+autocmd FileType vimwiki map <F5> :w<CR>:!kb update %:t<CR>
 
 " Tab closure like Firefox (causes problems with split windows)
 "map <C-W> :q<CR>
