@@ -22,3 +22,6 @@
 [submodule "bundle/vim-livedown"]
 	path = bundle/vim-livedown
 	url = https://github.com/shime/vim-livedown.git
+[submodule "bundle/vim-dbus-server"]
+	path = bundle/vim-dbus-server
+	url = https://github.com/daniel-thompson/vim-dbus-server
