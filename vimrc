@@ -79,7 +79,7 @@ if has("autocmd")
   endfunction
 
   map ,t2   :echo TabSize(2)<CR>
-  map ,t2   :echo TabSize(3)<CR>
+  map ,t3   :echo TabSize(3)<CR>
   map ,t4   :echo TabSize(4)<CR>
   map ,t8   :echo TabSize(8)<CR>
   map ,tx   :%!expand -8<CR>
@@ -98,8 +98,8 @@ if has("folding")
 endif
 
 " Cut text down to size (C-J does not pre-join the lines)
-map <C-S-J> J74\|bi<CR><ESC>
-map <C-J> 74\|bi<CR><ESC>
+map <C-S-J> J74\|bhcw<CR><ESC>
+map <C-J> 74\|bhcw<CR><ESC>
 
 " get lookup the API top for the current function or open its man page
 map <F1> :!grep -h <cword>\( /u/thompsond/public/share/*.api<CR>
@@ -110,8 +110,8 @@ map <F2> gf
 map <S-F2> :sp<CR>gf
 
 " use F3 to jump into and out of hex editing
-map <F3> :set binary<CR>:%!xxd -c 12 <CR>
-map <S-F3> :%!xxd -c 12 -r<CR>
+map <F3> :set binary<CR>:%!xxd -c 16 <CR>
+map <S-F3> :%!xxd -c 16 -r<CR>
 
 " Reflow text in paragraph under cursor
 nmap <F4> vapgq
@@ -131,6 +131,7 @@ nmap <F11> :TagbarToggle<CR>
 
 " repeat the last command on the next line (F12 is Again on Sun keyboards)
 map <F12> j.
+map <S-F12> n.
 
 " edit the .vimrc file
 map ,vrc  :sp $HOME/.vim/vimrc<CR>
@@ -146,6 +147,12 @@ map ,gr :!git release %<CR>
 " Templates
 map ,tr !!cat /home/drt/Documents/Wiki/release_template.md<CR>
 map ,tt <ESC>1GO # <ESC>:let @"=expand("%:t:r")<CR>pkJ
+
+" DCO shortcuts
+map ,ab oAcked-by: Daniel Thompson <daniel.thompson@linaro.org><ESC>
+map ,sob oSigned-off-by: Daniel Thompson <daniel.thompson@linaro.org><ESC>
+map ,rb oReviewed-by: Daniel Thompson <daniel.thompson@linaro.org><ESC>
+map ,tb oTested-by: Daniel Thompson <daniel.thompson@linaro.org><ESC>
 
 " underscore based versions of vi's cw & dw
 map cu c/_<CR>
