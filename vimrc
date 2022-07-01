@@ -13,6 +13,16 @@
 " of a vimrc file
 set nocompatible
 
+" Configure some of the plugins (also has to be before we load them).
+set omnifunc=ale#completion#OmniFunc
+let g:ale_completion_enabled = 1
+let g:ale_completion_autoimport = 1
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\    '*': ['remove_trailing_lines', 'trim_whitespace'],
+\    'rust': ['rustfmt'],
+\}
+
 " pathogen setup (lightweight vim package manager)
 " See: https://github.com/tpope/vim-pathogen
 runtime bundle/vim-pathogen/autoload/pathogen.vim
@@ -65,7 +75,7 @@ if has("autocmd")
   augroup END
 endif
 
-" this does not actually use any auto commands but this function and its 
+" this does not actually use any auto commands but this function and its
 " friends are not compiled into all vim editors (think /bin/vi on some
 " GNU/Linux systems) and I cannot find the correct string from the
 " docs
@@ -176,7 +186,7 @@ imap <C-Space> <C-N>
 
 " <Tab> and <S-Tab> indent and unindent code
 map <Tab> :><CR>
-map <S-Tab> :<<CR> 
+map <S-Tab> :<<CR>
 
 " Mash a button to fix the indentation or auto-complete (this will override the
 " above for C & C++ files)
