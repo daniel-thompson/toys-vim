@@ -25,3 +25,9 @@
 [submodule "bundle/vim-dbus-server"]
 	path = bundle/vim-dbus-server
 	url = https://github.com/daniel-thompson/vim-dbus-server
+[submodule "bundle/ale"]
+	path = bundle/ale
+	url = https://github.com/dense-analysis/ale
+[submodule "bundle/rust.vim"]
+	path = bundle/rust.vim
+	url = https://github.com/rust-lang/rust.vim
