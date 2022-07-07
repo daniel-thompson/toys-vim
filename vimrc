@@ -282,14 +282,3 @@ function! OpenIssue( )
 endfunction
 
 map <silent> <C-i> :call OpenIssue()<CR><C-l>
-
-
-
-"
-" Project management
-"
-
-" Recognise kbuild and set makeprg accordingly
-if filereadable("Kbuild")
-	set makeprg=make\ V=1\ -j24
-endif
