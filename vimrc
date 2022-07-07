@@ -22,6 +22,13 @@ let g:ale_fixers = {
 \    '*': ['remove_trailing_lines', 'trim_whitespace'],
 \    'rust': ['rustfmt'],
 \}
+" Currently rust-analyzer is only available in nightly builds so this
+" requires both of the following in addition to the following extra
+" configuration for ALE:
+"   rustup component add rust-src
+"   rustup +nightly component add rust-analyzer-preview
+let g:ale_rust_analyzer_executable = "/home/drt/.rustup/toolchains/nightly-aarch64-unknown-linux-gnu/bin/rust-analyzer"
+let g:ale_linters = {'rust': ['cargo', 'analyzer']}
 
 " pathogen setup (lightweight vim package manager)
 " See: https://github.com/tpope/vim-pathogen
